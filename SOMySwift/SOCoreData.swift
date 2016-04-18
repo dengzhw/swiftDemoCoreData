@@ -65,7 +65,7 @@ class SOCoreData: NSObject {
             print("tel:%@", details.valueForKey("tel"))
             
         }
-}
+    }
 }
 
 

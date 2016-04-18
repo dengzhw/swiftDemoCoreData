@@ -18,7 +18,7 @@ class SOMyCell :UITableViewCell{
     }
     func createView(){
         imageview  = UIImageView(frame:CGRect(x: 0, y: 0, width: 60, height: 60))
-        imageview.image = UIImage(named: "AppIcon")
+        imageview.image = UIImage(named: "SOImage")
         self.contentView.userInteractionEnabled = true
         let tap :UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapHandle")
         self.contentView.addGestureRecognizer(tap)

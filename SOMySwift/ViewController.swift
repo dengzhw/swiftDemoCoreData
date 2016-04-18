@@ -15,7 +15,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        /**
+        CoreData Test
+        **/
         createCoreData()
+        /**
+        UITableView Test
+        **/
 //        createUIView()
 
     }
@@ -27,12 +33,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func createUIView(){
-        createUIView();
         createData();
-        //        createHeader();
+//        createHeader();
         self.view.backgroundColor = UIColor.whiteColor()
         if tableview == nil{
-            self.tableview = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height),style: UITableViewStyle.Plain)
+            self.tableview = UITableView(frame: CGRect(x: 0, y: 64, width: self.view.bounds.width, height: self.view.bounds.height),style: UITableViewStyle.Plain)
             self.view.addSubview(self.tableview!)
         }
         self.tableview?.delegate = self;
@@ -55,12 +60,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "function")
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.translucent = true
-        
-        
-        
-        
-        
-        
         
     }
     func createData(){
