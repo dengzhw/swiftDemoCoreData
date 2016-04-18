@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var tableview :UITableView?
@@ -14,8 +15,21 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        createCoreData()
+//        createUIView()
+
+    }
+    
+    func createCoreData(){
+        let coredata :SOCoreData = SOCoreData()
+        coredata.createData()
+        coredata.fetchData()
+    }
+    
+    func createUIView(){
+        createUIView();
         createData();
-//        createHeader();
+        //        createHeader();
         self.view.backgroundColor = UIColor.whiteColor()
         if tableview == nil{
             self.tableview = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height),style: UITableViewStyle.Plain)
@@ -23,9 +37,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
         self.tableview?.delegate = self;
         self.tableview?.dataSource = self
-
-        // Do any additional setup after loading the view, typically from a nib.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

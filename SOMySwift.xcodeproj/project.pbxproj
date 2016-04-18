@@ -17,6 +17,7 @@
 		09C2482F1CC0F5400091AEE6 /* SOMySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2482E1CC0F5400091AEE6 /* SOMySwiftUITests.swift */; };
 		09C2483D1CC1EE690091AEE6 /* SOMyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2483C1CC1EE690091AEE6 /* SOMyCell.swift */; };
 		09FBCDC91CC4A47100AF3F50 /* AppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09FBCDC71CC4A47100AF3F50 /* AppModel.xcdatamodeld */; };
+		09FBCDCB1CC4BF4B00AF3F50 /* SOCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FBCDCA1CC4BF4B00AF3F50 /* SOCoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		09C248301CC0F5400091AEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C2483C1CC1EE690091AEE6 /* SOMyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOMyCell.swift; sourceTree = "<group>"; };
 		09FBCDC81CC4A47100AF3F50 /* AppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppModel.xcdatamodel; sourceTree = "<group>"; };
+		09FBCDCA1CC4BF4B00AF3F50 /* SOCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOCoreData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				09C2481A1CC0F5400091AEE6 /* Info.plist */,
 				09C248121CC0F5400091AEE6 /* SOMySwift.xcdatamodeld */,
 				09C2483C1CC1EE690091AEE6 /* SOMyCell.swift */,
+				09FBCDCA1CC4BF4B00AF3F50 /* SOCoreData.swift */,
 			);
 			path = SOMySwift;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				09C2483D1CC1EE690091AEE6 /* SOMyCell.swift in Sources */,
 				09C248141CC0F5400091AEE6 /* SOMySwift.xcdatamodeld in Sources */,
 				09C2480C1CC0F5400091AEE6 /* AppDelegate.swift in Sources */,
+				09FBCDCB1CC4BF4B00AF3F50 /* SOCoreData.swift in Sources */,
 				09FBCDC91CC4A47100AF3F50 /* AppModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
