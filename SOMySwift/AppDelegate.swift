@@ -17,7 +17,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow()
+        self.window?.frame = UIScreen.mainScreen().bounds
+        self.window?.rootViewController = ViewController()
+        self.window?.makeKeyAndVisible()
+        //创建coreData数据
+        createData()
+        //获取coreData数据
+        fetchData()
         return true
+    }
+    func createData(){
+        let contex :NSManagedObjectContext = self.managedObjectContext;
+        let contactInfo :NSManagedObject = NSEntityDescription.insertNewObjectForEntityForName("ContactInfo", inManagedObjectContext: contex) as NSManagedObject!
+        contactInfo.setValue("deng", forKey: "name")
+        contactInfo.setValue("24", forKey: "age")
+        contactInfo.setValue("birthday 100", forKey: "birthday")
+        
+        let contactDetail :NSManagedObject = NSEntityDescription.insertNewObjectForEntityForName("ContactDetail", inManagedObjectContext: contex)
+        contactDetail.setValue("addressB", forKey: "address")
+        contactDetail.setValue("nameB", forKey: "name")
+        contactDetail.setValue("1349984824", forKey: "tel")
+        
+        contactInfo.setValue(contactDetail, forKey: "detail")
+        contactDetail.setValue(contactInfo, forKey: "info")
+        do {
+         try contex.save()
+        }
+        catch let error as NSError
+        {
+            print("不能保存：%@", error.description);
+        }
+        
+    }
+    func fetchData(){
+        let context :NSManagedObjectContext = self.managedObjectContext;
+        let fetchRequest :NSFetchRequest  = NSFetchRequest()
+        let entity :NSEntityDescription  = NSEntityDescription()
+        entity.name = "ContactInfo"
+        fetchRequest.entity = entity;
+        var fetchObjects :[AnyObject]?
+        do{
+            try fetchObjects = context.executeFetchRequest(fetchRequest)
+        } catch let error as NSError{
+            print(error.description)
+        }
+        for item in fetchObjects!{
+            print("name:%@", item.valueForKey("name"))
+            print("age:%@", item.valueForKey("age"))
+            print("birthday:%@", item.valueForKey("birthday"))
+            let details :NSManagedObject = item.valueForKey("detail") as! NSManagedObject
+            print("address:%@", details.valueForKey("address"))
+            print("name:%@", details.valueForKey("name"))
+            print("tel:%@", details.valueForKey("tel"))
+
+        }
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {

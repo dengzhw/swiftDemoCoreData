@@ -15,6 +15,8 @@
 		09C248191CC0F5400091AEE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09C248171CC0F5400091AEE6 /* LaunchScreen.storyboard */; };
 		09C248241CC0F5400091AEE6 /* SOMySwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C248231CC0F5400091AEE6 /* SOMySwiftTests.swift */; };
 		09C2482F1CC0F5400091AEE6 /* SOMySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2482E1CC0F5400091AEE6 /* SOMySwiftUITests.swift */; };
+		09C2483D1CC1EE690091AEE6 /* SOMyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2483C1CC1EE690091AEE6 /* SOMyCell.swift */; };
+		09FBCDC91CC4A47100AF3F50 /* AppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09FBCDC71CC4A47100AF3F50 /* AppModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		09C2482A1CC0F5400091AEE6 /* SOMySwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOMySwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C2482E1CC0F5400091AEE6 /* SOMySwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOMySwiftUITests.swift; sourceTree = "<group>"; };
 		09C248301CC0F5400091AEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09C2483C1CC1EE690091AEE6 /* SOMyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOMyCell.swift; sourceTree = "<group>"; };
+		09FBCDC81CC4A47100AF3F50 /* AppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		09C247FF1CC0F5400091AEE6 = {
 			isa = PBXGroup;
 			children = (
+				09FBCDC71CC4A47100AF3F50 /* AppModel.xcdatamodeld */,
 				09C2480A1CC0F5400091AEE6 /* SOMySwift */,
 				09C248221CC0F5400091AEE6 /* SOMySwiftTests */,
 				09C2482D1CC0F5400091AEE6 /* SOMySwiftUITests */,
@@ -106,6 +111,7 @@
 				09C248171CC0F5400091AEE6 /* LaunchScreen.storyboard */,
 				09C2481A1CC0F5400091AEE6 /* Info.plist */,
 				09C248121CC0F5400091AEE6 /* SOMySwift.xcdatamodeld */,
+				09C2483C1CC1EE690091AEE6 /* SOMyCell.swift */,
 			);
 			path = SOMySwift;
 			sourceTree = "<group>";
@@ -260,8 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				09C2480E1CC0F5400091AEE6 /* ViewController.swift in Sources */,
+				09C2483D1CC1EE690091AEE6 /* SOMyCell.swift in Sources */,
 				09C248141CC0F5400091AEE6 /* SOMySwift.xcdatamodeld in Sources */,
 				09C2480C1CC0F5400091AEE6 /* AppDelegate.swift in Sources */,
+				09FBCDC91CC4A47100AF3F50 /* AppModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +494,7 @@
 				09C248351CC0F5400091AEE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09C248361CC0F5400091AEE6 /* Build configuration list for PBXNativeTarget "SOMySwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +503,7 @@
 				09C248381CC0F5400091AEE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09C248391CC0F5400091AEE6 /* Build configuration list for PBXNativeTarget "SOMySwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +512,7 @@
 				09C2483B1CC0F5400091AEE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -513,6 +524,16 @@
 			);
 			currentVersion = 09C248131CC0F5400091AEE6 /* SOMySwift.xcdatamodel */;
 			path = SOMySwift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		09FBCDC71CC4A47100AF3F50 /* AppModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				09FBCDC81CC4A47100AF3F50 /* AppModel.xcdatamodel */,
+			);
+			currentVersion = 09FBCDC81CC4A47100AF3F50 /* AppModel.xcdatamodel */;
+			path = AppModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
